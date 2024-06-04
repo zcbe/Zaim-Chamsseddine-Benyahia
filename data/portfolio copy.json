@@ -29,43 +29,43 @@
     {
       "id": "1",
       "title": "Riding Cities",
-      "description": "Le projet 2 du parcours Intégrateur Web d'OpenClassrooms nous permet de découvrir le langage HTML au travers du site Internet de Riding Cities.",
+      "description": "Project 2 of the OpenClassrooms Web Integrator course allows us to discover the HTML language through the Riding Cities website.",
       "imageSrc": "",
       "url": "https://github.com/zcbe"
     },
     {
       "id": "2",
       "title": "Booki",
-      "description": "Le projet 3 du parcours Intégrateur Web d'OpenClassrooms nous permet d'intégrer l'interface du site de Booki en utilisant du code HTML et CSS.",
+      "description": "Project 3 of the OpenClassrooms Web Integrator course allows us to integrate the interface of the Booki website using HTML and CSS code.",
       "imageSrc": "",
       "url": "https://github.com/zcbe?tab=repositories"
     },
     {
       "id": "3",
       "title": "Ohmyfood",
-      "description": "Le projet 4 du parcours Intégrateur Web d'OpenClassrooms consite à intégrer l'interface du site d'Ohmyfood en commençant par la version mobile.",
+      "description": "Project 4 of the OpenClassrooms Web Integrator course involves integrating the interface of the Ohmyfood website, starting with the mobile version.",
       "imageSrc": "",
       "url": "https://zcbe.github.io/Ohmyfood/"
     },
     {
       "id": "4",
       "title": "Print It",
-      "description": "Le projet 5 du parcours Intégrateur Web d'OpenClassrooms nous permet de découvrir le langage JavaScript au travers du site de Print It.",
+      "description": "Project 5 of the OpenClassrooms Web Integrator course allows us to discover the JavaScript language through the Print It website.",
       "imageSrc": "",
       "url": "https://zcbe.github.io/print-it-oc/"
     },
     {
       "id": "5",
       "title": "Portfolio - Sophie Bluel",
-      "description": "Le projet 6 du parcours Intégrateur Web d'OpenClassrooms nous emmène sur la conception du site portfolio d'une architecte en utilisant JavaScript et en communiquant avec une API.",
+      "description": "Project 6 of the OpenClassrooms Web Integrator course involves designing an architect's portfolio website using JavaScript and communicating with an API.",
       "imageSrc": "",
       "url": "https://github.com/zcbe/Sophie-Bluel-P6-OC"
     },
     {
       "id": "6",
       "title": "Menu Maker",
-      "description": "Le projet 7 du parcours Intégrateur Web d'OpenClassrooms est différent des autres projets réalisés, il s'agit de planifier le développement du prochain site de notre client Qwenta.",
-      "imageSrc": "",
+      "description": "Project 7 of the OpenClassrooms Web Integrator course is different from the other projects we've completed. It involves planning the development of our client Qwenta's upcoming website.",
+      "imageSrc": "/Users/benyahia/Desktop/react-portfolio-template-CB/data/projects/724events/cover.webp",
       "url": ""
     },
     {
@@ -78,53 +78,51 @@
     {
       "id": "9cc4f3be-aa32-4349-a4ff-9b7841e8d3dd",
       "title": "Nina Carducci",
-      "description": "Le projet 9 du parcours Intégrateur Web d'OpenClassrooms consiste à améliorer les performances et le référencement naturel du site d'un client.",
+      "description": "Project 9 of the OpenClassrooms Web Integrator course involves improving the performance and SEO of a client's website.",
       "imageSrc": "/Users/benyahia/Desktop/react-portfolio-template-CB/data/projects/724events/cover.webp",
       "url": "https://zcbe.github.io/ninacarducci.github.io/"
     },
     {
       "id": "6b5aaff7-bfdb-4a89-a516-dffa93857ce6",
       "title": "724 events",
-      "description": "Le projet 10 du parcours Intégrateur Web consiste à débugger le site d'une agence d'événementiel appelée 724events.",
+      "description": "Project 10 of the OpenClassrooms Web Integrator course involves debugging the website of an event agency called 724events.",
       "imageSrc": "/projects/724events/cover.webp",
       "url": "https://github.com/zcbe/724-events/tree/main2"
     },
     {
       "id": "06d7be04-54d9-4072-aae6-5365606004b0",
       "title": "Argent Bank",
-      "description": "Le projet 11 du parcours Intégrateur Web d'OpenClassrooms consiste à implémenter le front-end d'une application bancaire : Argent Bank en utilisant React.",
+      "description": "Project 11 of the OpenClassrooms Web Integrator course involves implementing the front end of a banking application, Argent Bank, using React.",
       "imageSrc": "",
       "url": "https://github.com/zcbe/ArgentBank-website"
     }
   ],
   "services": [],
-  "aboutpara": "Je suis un professionnel passionné, ayant une formation initiale en génie électrique et informatique industrielle. Ma curiosité m'a ensuite poussé à élargir mes horizons en obtenant une licence et un master en génie logistique. Cette diversité de connaissances m'a permis de développer une approche holistique dans la résolution de problèmes, alliant compétences techniques et compréhension des processus.\n\nFort de mon parcours académique, j'ai décidé de relever de nouveaux défis en me lançant dans une reconversion professionnelle dans le domaine du développement web. Ce choix audacieux découle de ma passion pour la technologie et ma volonté constante de me perfectionner dans un environnement en constante évolution.\n\nAujourd'hui, je m'épanouis pleinement dans le développement web, où je mets à profit mes compétences techniques acquises au fil des ans ainsi que ma capacité à apprendre rapidement de nouvelles technologies. Je suis motivé par la création d'expériences utilisateur exceptionnelles et la résolution de problèmes complexes.\n\nMon parcours atypique m'a permis de développer une approche créative et innovante dans mon travail, tout en conservant une rigueur technique indispensable. Je suis convaincu que ma polyvalence et ma passion pour le développement web font de moi un atout précieux pour tout projet ambitieux.",
+  "aboutpara": "I am a passionate professional, with an initial background in electrical engineering and industrial computing. My curiosity then led me to broaden my horizons by obtaining a bachelor's and master's degree in logistics engineering. This diversity of knowledge has allowed me to develop a holistic approach to problem-solving, combining technical skills with an understanding of processes.\n\nBuilding on my academic background, I decided to take on new challenges by embarking on a career change into web development. This bold choice stems from my passion for technology and my constant desire to improve in an ever-evolving environment.\n\nToday, I thrive in web development, leveraging my technical skills acquired over the years and my ability to quickly learn new technologies. I am motivated by creating exceptional user experiences and solving complex problems.\n\nMy unconventional path has enabled me to develop a creative and innovative approach to my work while maintaining essential technical rigor. I am convinced that my versatility and passion for web development make me a valuable asset for any ambitious project.",
   "resume": {
-    "tagline": "👋  I'm a software engineer, product designer.",
-    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "tagline": " 👋 I am a web developer, product designer.",
+    "description": "Explore a world of interactivity and responsiveness: dive into my expert portfolio where React JS comes to life to deliver exceptional user experiences.",
     "experiences": [
       {
         "id": "1",
-        "dates": "2013 - 2023",
+        "dates": "January 2023 - October 2023",
         "type": "Full Time",
-        "position": "PMO",
-        "bullets": "After my diploma, I worked in different Renault factories, as a scheduler, supplier management, project manager, and industrial performance manager. and worked at framtome a nuclear factory, as PMO Baseline."
+        "position": "Renault factories",
+        "bullets": "Industrial Performance Manager"
       },
       {
         "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-        "dates": "July 2020 - March 2022",
+        "dates": "January 2022 - October 2022",
         "type": "Full Time",
-        "position": "Frontend Engineer at X",
-        "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+        "position": "Nuclear factory",
+        "bullets": "PMO Baseline"
       },
       {
         "id": "81e5f1e4-048b-4372-a2f5-a94f30b89d39",
-        "dates": "Enter Dates",
+        "dates": "September 2013 - December 2021",
         "type": "Full Time",
-        "position": "Frontend Engineer at X",
-        "bullets": [
-          "Worked on the frontend of a React application"
-        ]
+        "position": "Renault factories",
+        "bullets": "Scheduler, Supplier Management, Project Manager, Industrial Performance Manager"
       }
     ],
     "education": {
