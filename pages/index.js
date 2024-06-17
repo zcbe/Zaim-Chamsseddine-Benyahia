@@ -100,6 +100,7 @@ export default function Home() {
               <WorkCard
                 key={project.id}
                 img={project.imageSrc}
+                alt={project.alt}
                 name={project.title}
                 description={project.description}
                 onClick={() => window.open(project.url)}

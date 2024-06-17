@@ -35,18 +35,21 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
-                    }
+                    } aria-label="Changer de thème"
                   >
                     <img
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`} aria-label = "sun svg"
+                      }`} alt={theme === "dark" ? "Lune" : "Soleil"}
                     ></img>
                   </Button>
                 )}
 
-                <Popover.Button>
+
+
+
+                <Popover.Button aria-label="Ouvrir le menu">
                   <img
                     className="h-5"
                     src={`/images/${
@@ -69,23 +72,23 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
+                  <Button onClick={handleWorkScroll} aria-label="Work">Work</Button>
+                  <Button onClick={handleAboutScroll} aria-label="Aout">About</Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button onClick={() => router.push("/blog")} aria-label="Blog">Blog</Button>
                   )}
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:benyahia.zaim@gmail.com")
-                      }
+                        window.open("mailto:benyahia.zaim@gmail.com") 
+                      } aria-label="Contact"
                     >
                       Resume
                     </Button>
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:benyahia.zaim@gmail.com")}
+                    onClick={() => window.open("mailto:benyahia.zaim@gmail.com")} aria-label="Contact"
                   >
                     Contact
                   </Button>
