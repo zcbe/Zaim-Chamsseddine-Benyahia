@@ -41,7 +41,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
+                      }`} aria-label = "sun svg"
                     ></img>
                   </Button>
                 )}

@@ -24,7 +24,6 @@ Blog - https://blog.chetanverma.com/how-to-build-a-portfolio-website-using-nextj
 
 - Header
 - Work
-- Services
 - About
 - Contact
 - Markdown Blog
