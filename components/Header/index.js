@@ -60,7 +60,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         : theme === "light"
                         ? "cancel.svg"
                         : "cancel-white.svg"
-                    }`}
+                    }`}    alt="Icône de menu"
                   ></img>
                 </Popover.Button>
               </div>
@@ -72,23 +72,23 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll} aria-label="Work">Work</Button>
-                  <Button onClick={handleAboutScroll} aria-label="Aout">About</Button>
+                  <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
+                  <Button onClick={handleAboutScroll} aria-label="Voir la section Aout">About</Button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")} aria-label="Blog">Blog</Button>
+                    <Button onClick={() => router.push("/blog")} aria-label="Accéder au Blog">Blog</Button>
                   )}
                   {showResume && (
                     <Button
                       onClick={() =>
                         window.open("mailto:benyahia.zaim@gmail.com") 
-                      } aria-label="Contact"
+                      } aria-label="Voir le CV"
                     >
                       Resume
                     </Button>
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:benyahia.zaim@gmail.com")} aria-label="Contact"
+                    onClick={() => window.open("mailto:benyahia.zaim@gmail.com")} aria-label="Contactez-moi"
                   >
                     Contact
                   </Button>
@@ -158,6 +158,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  alt="Icône pour changer le thème"
                 ></img>
               </Button>
             )}
@@ -183,11 +184,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Changer de thème"
               >
                 <img
                   className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}     
+                  alt="Icône pour changer le thème"
                 ></img>
               </Button>
             )}

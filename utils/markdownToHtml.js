@@ -11,7 +11,7 @@ export default async function markdownToHtml(markdown) {
   // Construire le contenu HTML complet avec la balise meta description
   const htmlContent = `
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
       <meta charset="UTF-8">
       <meta name="description" content="${metaDescription}">
