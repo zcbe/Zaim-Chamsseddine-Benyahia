@@ -26,4 +26,13 @@ const WorkCard = ({ img, name, description, onClick }) => {
   );
 };
 
-export default WorkCard;
+const WorkCardWithPreload = ({ img, name, description, onClick }) => {
+  return (
+    <>
+      <link rel="preload" href={img} as="image" />
+      <WorkCard img={img} name={name} description={description} onClick={onClick} />
+    </>
+  );
+};
+
+export default WorkCardWithPreload;
