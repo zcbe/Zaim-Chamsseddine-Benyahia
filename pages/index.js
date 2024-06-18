@@ -101,6 +101,7 @@ export default function Home() {
                 key={project.id}
                 img={project.imageSrc}
                 alt={project.alt}
+                tech={project.tech}
                 name={project.title}
                 description={project.description}
                 onClick={() => window.open(project.url)}

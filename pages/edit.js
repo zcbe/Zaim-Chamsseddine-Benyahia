@@ -362,6 +362,8 @@ const Edit = () => {
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
                       type="text"
                     ></input>
+                      </div>
+                     <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">
                       Alt
                     </label>
@@ -377,6 +379,24 @@ const Edit = () => {
                       type="text"
                     ></input>
                   </div>
+
+                  <div className="flex items-center mt-2">
+                    <label className="w-1/5 text-lg opacity-50">
+                      Technologies
+                    </label>
+                    <input
+                      value={project.tech}
+                      onChange={(e) =>
+                        editProjects(index, {
+                          ...project,
+                          tech: e.target.value,
+                        })
+                      }
+                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                      type="text"
+                    ></input>
+                  </div>
+
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">url</label>
                     <input

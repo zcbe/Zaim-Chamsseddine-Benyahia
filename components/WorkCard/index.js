@@ -1,6 +1,6 @@
 import React from "react";
 
-const WorkCard = ({ img, name, description, onClick }) => {
+const WorkCard = ({ img, name, description,tech, onClick }) => {
   return (
     <div
       className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
@@ -22,15 +22,18 @@ const WorkCard = ({ img, name, description, onClick }) => {
       <h2 className="text-xl">
         {description ? description : "Description"}
       </h2>
+      <h3 className="text-xl color-red border-black ">
+        {tech ? tech : "Technlogies"}
+      </h3>
     </div>
   );
 };
 
-const WorkCardWithPreload = ({ img, name, description, onClick }) => {
+const WorkCardWithPreload = ({ img, name, description, tech, onClick }) => {
   return (
     <>
       <link rel="preload" href={img} as="image" />
-      <WorkCard img={img} name={name} description={description} onClick={onClick} />
+      <WorkCard img={img} name={name} description={description} tech={tech} onClick={onClick} />
     </>
   );
 };
