@@ -22,7 +22,8 @@ const WorkCard = ({ img, name, description,tech, onClick }) => {
       <h2 className="text-xl">
         {description ? description : "Description"}
       </h2>
-      <h3 className="text-xl color-red border-black ">
+      <h3 className="font-bold border border-blue-300 p-2 flex items-center justify-center bg-blue-50 rounded-md rounded-lg;
+">
         {tech ? tech : "Technlogies"}
       </h3>
     </div>

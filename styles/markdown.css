@@ -15,7 +15,7 @@
   @apply mt-5 text-2xl;
 }
 .markdown-class h3 {
-  @apply mt-5 text-xl;
+  @apply mt-5 text-xl font-bold border border-blue-900 p-2 flex items-center justify-center bg-blue-100 rounded-md;
 }
 .markdown-class h4 {
   @apply mt-5 text-lg;

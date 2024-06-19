@@ -59,9 +59,10 @@ export default function Home() {
 
       <div className="container mx-auto mb-10">
         <Header
-          handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
+          handleWorkScroll={handleWorkScroll}
         />
+        
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
             <h1
@@ -91,6 +92,13 @@ export default function Home() {
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
+
+          <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
+          <h1 className="text-2xl text-bold">About</h1>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-5/5 bg-blue-50 p-4 rounded-lg text-justify">
+            {data.aboutpara}
+          </p>
+        </div>
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Project</h1>
@@ -119,12 +127,7 @@ export default function Home() {
             </Link>
           </div>
         )}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-        </div>
+
         <Footer />
       </div>
     </div>

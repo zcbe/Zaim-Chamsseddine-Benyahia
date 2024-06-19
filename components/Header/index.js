@@ -74,9 +74,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
                   <Button onClick={handleAboutScroll} aria-label="Voir la section Aout">About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")} aria-label="Accéder au Blog">Blog</Button>
-                  )}
                   {showResume && (
                     <Button
                       onClick={() =>
@@ -134,11 +131,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         </h1>
         {!isBlog ? (
           <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
             <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
+            <Button onClick={handleWorkScroll}>Work</Button>
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
