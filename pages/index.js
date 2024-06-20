@@ -51,7 +51,10 @@ export default function Home() {
     <div lang="en" className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name}</title>
+        <title>{data.name}</title>  
+        <meta name="description" content="Zaïm Chamsseddine Benyahia, développeur web à Lille, utilisant html,
+         css, js, react, swagger, api"/>
+
       </Head>
 
       <div className="gradient-circle"></div>
