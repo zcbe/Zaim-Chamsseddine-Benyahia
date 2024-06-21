@@ -382,7 +382,7 @@ const Edit = () => {
 
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">
-                      Technologies
+                      Stack
                     </label>
                     <input
                       value={project.tech}
