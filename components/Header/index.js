@@ -71,10 +71,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
                   <Button onClick={handleAboutScroll} aria-label="Voir la section Aout">About</Button>
                   {showResume && (
-                    <Button
-                      onClick={() =>
-                        window.open("mailto:benyahia.zaim@gmail.com") 
-                      } aria-label="Voir le CV"
+                      <Button
+                      onClick={() => router.push("/resume")}
+                      classes="first:ml-1"
                     >
                       Resume
                     </Button>
