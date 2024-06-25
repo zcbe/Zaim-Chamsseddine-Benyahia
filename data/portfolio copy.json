@@ -29,7 +29,7 @@
     {
       "id": "1",
       "title": "Riding Cities",
-      "description": "Project 2 of the OpenClassrooms Web Integrator course allows us to discover the HTML language through the Riding Cities website.",
+      "description": "Project 2 of the OpenClassrooms Web Integrator course allows us to discover the HTML frontend through the Riding Cities website.",
       "imageSrc": "",
       "url": "https://github.com/zcbe"
     },
@@ -50,7 +50,7 @@
     {
       "id": "4",
       "title": "Print It",
-      "description": "Project 5 of the OpenClassrooms Web Integrator course allows us to discover the JavaScript language through the Print It website.",
+      "description": "Project 5 of the OpenClassrooms Web Integrator course allows us to discover the JavaScript frontend through the Print It website.",
       "imageSrc": "",
       "url": "https://zcbe.github.io/print-it-oc/"
     },
@@ -129,7 +129,7 @@
       "universityDate": "2023-2024",
       "universityPara": "Formation développeur intégrateur web avec OpenClassrooms"
     },
-    "languages": [
+    "frontends": [
       "Javascript",
       "HTML5",
       "CSS",
@@ -138,7 +138,7 @@
       "NodeJs",
       "Added"
     ],
-    "frameworks": [
+    "backends": [
       "Node"
     ],
     "others": [

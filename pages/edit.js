@@ -668,19 +668,19 @@ const Edit = () => {
               <div className="flex">
                 <label className="w-1/5 text-lg opacity-50">Front-end</label>
                 <div className="w-4/5 ml-10 flex flex-col">
-                  {data.resume.languages.map((language, index) => (
+                  {data.resume.frontends.map((frontend, index) => (
                     <div key={index} className="flex">
                       <input
-                        value={language}
+                        value={frontend}
                         onChange={(e) => {
                           setData({
                             ...data,
                             resume: {
                               ...data.resume,
-                              languages: [
-                                ...data.resume.languages.slice(0, index),
+                              frontends: [
+                                ...data.resume.frontends.slice(0, index),
                                 e.target.value,
-                                ...data.resume.languages.slice(index + 1),
+                                ...data.resume.frontends.slice(index + 1),
                               ],
                             },
                           });
@@ -694,7 +694,7 @@ const Edit = () => {
                             ...data,
                             resume: {
                               ...data.resume,
-                              languages: data.resume.languages.filter(
+                              frontends: data.resume.frontends.filter(
                                 (value, i) => index !== i
                               ),
                             },
@@ -713,7 +713,7 @@ const Edit = () => {
                         ...data,
                         resume: {
                           ...data.resume,
-                          languages: [...data.resume.languages, "Added"],
+                          frontends: [...data.resume.frontends, "Added"],
                         },
                       })
                     }
@@ -726,19 +726,19 @@ const Edit = () => {
               <div className="flex">
                 <label className="w-1/5 text-lg opacity-50">Back-end</label>
                 <div className="w-4/5 ml-10 flex flex-col">
-                  {data.resume.frameworks.map((framework, index) => (
+                  {data.resume.backends.map((backend, index) => (
                     <div key={index} className="flex">
                       <input
-                        value={framework}
+                        value={backend}
                         onChange={(e) => {
                           setData({
                             ...data,
                             resume: {
                               ...data.resume,
-                              frameworks: [
-                                ...data.resume.frameworks.slice(0, index),
+                              backends: [
+                                ...data.resume.backends.slice(0, index),
                                 e.target.value,
-                                ...data.resume.frameworks.slice(index + 1),
+                                ...data.resume.backends.slice(index + 1),
                               ],
                             },
                           });
@@ -752,7 +752,7 @@ const Edit = () => {
                             ...data,
                             resume: {
                               ...data.resume,
-                              frameworks: data.resume.frameworks.filter(
+                              backends: data.resume.backends.filter(
                                 (value, i) => index !== i
                               ),
                             },
@@ -769,7 +769,7 @@ const Edit = () => {
                         ...data,
                         resume: {
                           ...data.resume,
-                          frameworks: [...data.resume.frameworks, "Added"],
+                          backends: [...data.resume.backends, "Added"],
                         },
                       })
                     }

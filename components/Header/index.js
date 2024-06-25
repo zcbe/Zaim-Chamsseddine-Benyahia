@@ -1,4 +1,4 @@
-import { Popover } from "@headlessui/react";
+import { Popover } from "@headlessui/react"; //Composant de Headless UI pour créer des menus déroulants.
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -11,7 +11,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showBlog, showResume } = data;
+  const { name, showResume, } = data;
 
   useEffect(() => {
     setMounted(true);
@@ -45,10 +45,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     ></img>
                   </Button>
                 )}
-
-
-
-
                 <Popover.Button aria-label="Ouvrir le menu">
                   <img
                     className="h-5"
@@ -95,9 +91,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={() => router.push("/")} classes="first:ml-1">
                     Home
                   </Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
+                  
                   {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
@@ -160,9 +154,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         ) : (
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
+            
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}

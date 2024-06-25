@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "next-themes"; // hook de next-themes pour gérer mes thèmes sombres et clairs
 import data from "../../data/portfolio.json";
 
 const Button = ({ children, type, onClick, classes }) => {
