@@ -126,7 +126,7 @@ const Edit = () => {
           <div className="flex items-center justify-between">
             <h1 className="text-4xl">Dashboard</h1>
             <div className="flex items-center">
-              <Button onClick={saveData} type="primary">
+              <Button onClick={saveData}>
                 Save
               </Button>
             </div>
@@ -135,25 +135,25 @@ const Edit = () => {
           <div className="flex items-center">
             <Button
               onClick={() => setCurrentTabs("HEADER")}
-              type={currentTabs === "HEADER" && "primary"}
+              type={currentTabs === "HEADER"}
             >
               Header
             </Button>
             <Button
               onClick={() => setCurrentTabs("PROJECTS")}
-              type={currentTabs === "PROJECTS" && "primary"}
+              type={currentTabs === "PROJECTS"}
             >
               Projects
             </Button>
             <Button
               onClick={() => setCurrentTabs("SOCIAL")}
-              type={currentTabs === "SOCIAL" && "primary"}
+              type={currentTabs === "SOCIAL"}
             >
               Social
             </Button>
             <Button
               onClick={() => setCurrentTabs("RESUME")}
-              type={currentTabs === "RESUME" && "primary"}
+              type={currentTabs === "RESUME"}
             >
               Resume
             </Button>
@@ -228,7 +228,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
                   onClick={() => setData({ ...data, showBlog: true })}
-                  type={data.showBlog && "primary"}
+                  type={data.showBlog}
                 >
                   Yes
                 </Button>
@@ -247,7 +247,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
                   onClick={() => setData({ ...data, darkMode: true })}
-                  type={data.darkMode && "primary"}
+                  type={data.darkMode}
                 >
                   Yes
                 </Button>
@@ -266,7 +266,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
                   onClick={() => setData({ ...data, showResume: true })}
-                  type={data.showResume && "primary"}
+                  type={data.showResume}
                 >
                   Yes
                 </Button>
@@ -285,7 +285,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
                   onClick={() => setData({ ...data, showCursor: true })}
-                  type={data.showCursor && "primary"}
+                  type={data.showCursor}
                 >
                   Yes
                 </Button>
@@ -311,7 +311,7 @@ const Edit = () => {
                     <h1 className="text-2xl">{project.title}</h1>
                     <Button
                       onClick={() => deleteProject(project.id)}
-                      type="primary"
+                      
                     >
                       Delete
                     </Button>
@@ -417,7 +417,7 @@ const Edit = () => {
             </div>
 
             <div className="my-10">
-              <Button onClick={addProject} type="primary">
+              <Button onClick={addProject} >
                 Add Project +
               </Button>
             </div>
@@ -442,7 +442,7 @@ const Edit = () => {
                     <h1 className="text-2xl">{social.title}</h1>
                     <Button
                       onClick={() => deleteSocials(social.id)}
-                      type="primary"
+                      
                     >
                       Delete
                     </Button>
@@ -480,7 +480,7 @@ const Edit = () => {
               </>
             ))}
             <div className="my-10">
-              <Button onClick={addSocials} type="primary">
+              <Button onClick={addSocials} >
                 Add Social +
               </Button>
             </div>
@@ -526,7 +526,7 @@ const Edit = () => {
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button
                       // onClick={() => deleteProject(project.id)}
-                      type="primary"
+                      
                     >
                       Delete
                     </Button>
@@ -595,7 +595,7 @@ const Edit = () => {
               ))}
             </div>
             <div className="my-10">
-              <Button onClick={handleAddExperiences} type="primary">
+              <Button onClick={handleAddExperiences} >
                 Add Experience +
               </Button>
             </div>
@@ -706,7 +706,7 @@ const Edit = () => {
                     </div>
                   ))}
                   <Button
-                    type="primary"
+                    
                     classes="hover:scale-100"
                     onClick={() =>
                       setData({
@@ -773,7 +773,7 @@ const Edit = () => {
                         },
                       })
                     }
-                    type="primary"
+                    
                     classes="hover:scale-100"
                   >
                     Add +
@@ -831,7 +831,7 @@ const Edit = () => {
                         },
                       })
                     }
-                    type="primary"
+                    
                     classes="hover:scale-100"
                   >
                     Add +

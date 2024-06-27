@@ -1,37 +1,24 @@
 import React from "react";
-import { useTheme } from "next-themes"; // hook de next-themes pour gérer mes thèmes sombres et clairs
-import data from "../../data/portfolio.json";
+import { useTheme } from "next-themes"; // Hook de next-themes pour gérer les thèmes sombres et clairs
+import data from "../../data/portfolio.json"; 
 
-const Button = ({ children, type, onClick, classes }) => {
-  const { theme } = useTheme();
-  if (type === "primary") {
-    return (
-      <button
-        onClick={onClick}
-        type="button"
-        className={`text-sm tablet:text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg ${
-          theme === "dark" ? "bg-white text-black" : "bg-black text-white"
-        }  transition-all duration-300 ease-out first:ml-0 hover:scale-105 active:scale-100 link ${
-          data.showCursor && "cursor-none"
-        }  ${classes}`}
-      >
-        {children}
-      </button>
-    );
-  }
+// Définition du composant Button
+const Button = ({ children, onClick }) => {
+  const { theme } = useTheme(); // Utilisation du hook useTheme pour obtenir le thème actuel
+
   return (
     <button
-      onClick={onClick}
-      type="button"
+      onClick={onClick} // Gestionnaire d'événements pour le clic sur le bouton
+      type="button" // Définition du type de bouton
       className={`text-sm tablet:text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 ${
-        theme === "dark"
-          ? "hover:bg-slate-600 text-white"
-          : "hover:bg-slate-100"
+        theme === "dark" 
+          ? "hover:bg-slate-600 text-white" // Styles pour le thème sombre
+          : "hover:bg-slate-100" // Styles pour le thème clair
       } hover:scale-105 active:scale-100  tablet:first:ml-0  ${
-        data.showCursor && "cursor-none"
-      } ${classes} link`}
+        data.showCursor && "cursor-none" // Application de la classe cursor-none si showCursor est vrai
+      } link`}
     >
-      {children}
+      {children} {/* Rendu des enfants passés au composant Button */}
     </button>
   );
 };
