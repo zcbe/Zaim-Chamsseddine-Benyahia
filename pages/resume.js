@@ -78,7 +78,7 @@ const Resume = () => {
                 <div className="flex mob:flex-col desktop:flex-row justify-between">
                   {resume.frontends && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Front-End</h2>
+                      <h2 className="text-lg text-blue-500">Front-End</h2>
                       <ul className="list-disc">
                         {/* Affiche chaque langage dans une liste */}
                         {resume.frontends.map((frontend, index) => (
@@ -90,7 +90,7 @@ const Resume = () => {
                   {/* Affiche les backends Back-End */}
                   {resume.backends && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Back-End</h2>
+                      <h2 className="text-lg text-blue-500">Back-End</h2>
                       <ul className="list-disc">
                         {/* Affiche chaque backend dans une liste */}
                         {resume.backends.map((backend, index) => (
@@ -102,7 +102,7 @@ const Resume = () => {
                   {/* Affiche d'autres compétences */}
                   {resume.others && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Autres</h2>
+                      <h2 className="text-lg text-blue-500">Autres</h2>
                       <ul className="list-disc">
                         {/* Affiche chaque autre compétence dans une liste */}
                         {resume.others.map((other, index) => (

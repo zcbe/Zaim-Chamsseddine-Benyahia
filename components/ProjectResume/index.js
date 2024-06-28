@@ -37,7 +37,7 @@ const ProjectResume = ({ dates, type, position, bullets }) => {
             {/* Boucle sur bulletsLocal pour afficher chaque élément dans une liste */}
             {bulletsLocal.map((bullet, index) => (
               // Chaque élément de liste avec une clé unique basée sur son index
-              <li key={index} className="text-sm my-1 opacity-70">
+              <li key={index} className="text-sm my-1 ml-5 opacity-70">
                 {bullet}
               </li>
             ))}
