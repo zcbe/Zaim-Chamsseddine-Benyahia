@@ -68,8 +68,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
                   <Button onClick={handleAboutScroll} aria-label="Voir la section Aout">About</Button>
+                  <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
+
                   {showResume && (
                       <Button
                       onClick={() => router.push("/resume")}
