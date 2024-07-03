@@ -16,15 +16,15 @@ const WorkCard = ({ img, name, description,tech, onClick }) => {
           src={img}
         ></img>
       </div>
-      <h1 className="mt-5 text-3xl font-medium">
+      <h3 className="mt-5 text-3xl font-medium">
         {name ? name : "Project Name"}
-      </h1>
-      <h2 className="text-xl">
-        {description ? description : "Description"}
-      </h2>
-      <h3 className="font-bold border border-blue-300 p-2 flex items-center justify-center rounded-md rounded-lg text-center whitespace-normal">
-        {tech ? tech : "Technlogies"}
       </h3>
+      <h4 className="text-xl">
+        {description ? description : "Description"}
+      </h4>
+      <h4 className="font-bold border border-blue-300 p-2 flex items-center justify-center rounded-md rounded-lg text-center whitespace-normal">
+        {tech ? tech : "Technlogies"}
+      </h4>
     </div>
   );
 };

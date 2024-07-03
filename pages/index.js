@@ -59,14 +59,13 @@ export default function Home() {
 
       <div className="gradient-circle"></div>  {/* Cercle de dégradé en fond */}
       <div className="gradient-circle-bottom"></div>  {/* Cercle de dégradé en bas de page */}
+      <div className="mx-auto mb-10" style={{ paddingLeft: '10px', paddingRight: '10px' }}>
 
-      <div className="container mx-auto mb-10">  {/* Conteneur principal avec une marge en bas */}
         <Header
           handleAboutScroll={handleAboutScroll}
           handleWorkScroll={handleWorkScroll}
-        />  {/* Composant Header avec des gestionnaires de défilement passés en props */}
-        
-        <div className="laptop:mt-20 mt-10">  {/* Contenu principal avec une marge différente selon la taille de l'écran */}
+        />  {/* Composant Header avec des gestionnaires de défilement passés en props */}      
+        <main className="laptop:mt-20 mt-10">  {/* Contenu principal avec une marge différente selon la taille de l'écran */}
           <div className="mt-5">  {/* Marge en haut */}
             {/* Titres dynamiques récupérés depuis les données */}
             <h1
@@ -96,19 +95,17 @@ export default function Home() {
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />  {/* Composant Socials avec une marge différente selon la taille de l'écran */}
-
-          {/* Section "About" avec une référence pour le défilement */}
-          <div className="mt-10 laptop:mt-10 p-2 laptop:p-0" ref={aboutRef}>
-            <h1 className="text-2xl text-bold">About</h1>  {/* Titre "About" */}
+      
+          <section About className="mt-10 laptop:mt-10 p-2 laptop:p-0" ref={aboutRef}>
+            <h2 className="text-2xl text-bold">About</h2>  {/* Titre "About" */}
             <p className="tablet:m-10 mt-2 tablet:w-4/5 text-xl laptop:text-3xl w-full laptop:w-4/5 p-4 rounded-lg text-justify">
               {data.aboutpara}  {/* Paragraphe dynamique récupéré depuis les données */}
             </p>
-          </div>
-        </div>
+          </section>
 
         {/* Section "Project" avec une référence pour le défilement */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Projects</h1> 
+        <section Work className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+          <h2 className="text-2xl text-bold">Work</h2> 
 
           {/* Liste des cartes de projet générées dynamiquement */}
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
@@ -124,8 +121,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
-
+        </section>
         {/* Bouton de développement (visible uniquement en mode développement) */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
@@ -134,9 +130,9 @@ export default function Home() {
             </Link>
           </div>
         )}
-
+          </main>
         <Footer />  {/* Composant Footer */}
-      </div>
-    </div>
+        </div>
+        </div>
   );
 }

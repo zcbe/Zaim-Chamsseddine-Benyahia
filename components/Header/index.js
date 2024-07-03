@@ -1,4 +1,4 @@
-import { Popover } from "@headlessui/react"; //Composant de Headless UI pour créer des menus déroulants.
+import { Popover } from "@headlessui/react"; // Composant de Headless UI pour créer des menus déroulants.
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -11,7 +11,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showResume, } = data;
+  const { name, showResume } = data;
 
   useEffect(() => {
     setMounted(true);
@@ -35,13 +35,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
-                    } aria-label="Changer de thème"
+                    }
+                    aria-label="Changer de thème"
                   >
                     <img
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`} alt="Theme de la page nuit ou jour"
+                      }`}
+                      alt="Theme de la page nuit ou jour"
                     ></img>
                   </Button>
                 )}
@@ -56,7 +58,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         : theme === "light"
                         ? "cancel.svg"
                         : "cancel-white.svg"
-                    }`}    alt="Icône de menu"
+                    }`}
+                    alt="Icône de menu"
                   ></img>
                 </Popover.Button>
               </div>
@@ -72,7 +75,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
 
                   {showResume && (
-                      <Button
+                    <Button
                       onClick={() => router.push("/resume")}
                       classes="first:ml-1"
                     >
@@ -81,7 +84,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:benyahia.zaim@gmail.com")} aria-label="Contactez-moi"
+                    onClick={() => window.open("mailto:benyahia.zaim@gmail.com")}
+                    aria-label="Contactez-moi"
                   >
                     Contact
                   </Button>
@@ -91,7 +95,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={() => router.push("/")} classes="first:ml-1">
                     Home
                   </Button>
-                  
+
                   {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
@@ -113,9 +117,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
+        className={`mt-10 hidden flex-row items-center justify-between sticky top-0 z-10 tablet:flex ${
+          theme === "light" ? "bg-white" : "bg-gray-800"
+        } dark:text-white`}
       >
         <h1
           onClick={() => router.push("/")}
@@ -154,7 +158,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         ) : (
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
-            
+
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
@@ -170,11 +174,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label="Changer de thème"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                aria-label="Changer de thème"
               >
                 <img
                   className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}     
+                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt="Icône pour changer le thème"
                 ></img>
               </Button>
