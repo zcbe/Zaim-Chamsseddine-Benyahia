@@ -1,21 +1,30 @@
-import { Popover } from "@headlessui/react"; // Composant de Headless UI pour créer des menus déroulants.
+import { useEffect, useState } from "react";
+import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
 import Button from "../Button";
-// Local Data
 import data from "../../data/portfolio.json";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-
   const { name, showResume } = data;
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    // Attendre que le thème soit monté avant de modifier le style du header
+    if (mounted) {
+      const header = document.getElementById("main-header");
+      if (header) {
+        header.classList.remove("bg-white", "bg-gray-800");
+        header.classList.add(theme === "light" ? "bg-white" : "bg-gray-800");
+      }
+    }
+  }, [mounted, theme]);
 
   return (
     <>
@@ -25,7 +34,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <div className="flex items-center justify-between p-2 laptop:p-0">
               <h1
                 onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
+                className={`font-medium p-2 laptop:p-0 link ${
+                  theme === "dark" ? "text-white" : ""
+                }`}
               >
                 {name}.
               </h1>
@@ -33,18 +44,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <div className="flex items-center">
                 {data.darkMode && (
                   <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                    }
+                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     aria-label="Changer de thème"
                   >
                     <img
                       className="h-6"
-                      src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
-                      alt="Theme de la page nuit ou jour"
-                    ></img>
+                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                      alt="Icône pour changer le thème"
+                    />
                   </Button>
                 )}
                 <Popover.Button aria-label="Ouvrir le menu">
@@ -60,24 +67,24 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         : "cancel-white.svg"
                     }`}
                     alt="Icône de menu"
-                  ></img>
+                  />
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
               className={`absolute right-0 z-10 w-11/12 p-4 ${
-                theme === "dark" ? "bg-slate-800" : "bg-white"
+                theme === "dark" ? "bg-gray-800" : "bg-white"
               } shadow-md rounded-md`}
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleAboutScroll} aria-label="Voir la section Aout">About</Button>
+                  <Button onClick={handleAboutScroll} aria-label="Voir la section About">About</Button>
                   <Button onClick={handleWorkScroll} aria-label="Voir la section Work">Work</Button>
 
                   {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
-                      classes="first:ml-1"
+                      className="first:ml-1"
                     >
                       Resume
                     </Button>
@@ -92,14 +99,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
+                  <Button onClick={() => router.push("/")} className="first:ml-1">
                     Home
                   </Button>
 
                   {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
-                      classes="first:ml-1"
+                      className="first:ml-1"
                     >
                       Resume
                     </Button>
@@ -117,9 +124,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
+        id="main-header"
         className={`mt-10 hidden flex-row items-center justify-between sticky top-0 z-10 tablet:flex ${
           theme === "light" ? "bg-white" : "bg-gray-800"
-        } dark:text-white`}
+        } ${theme === "dark" ? "text-white" : ""}`}
       >
         <h1
           onClick={() => router.push("/")}
@@ -134,7 +142,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
-                classes="first:ml-1"
+                className="first:ml-1"
               >
                 Resume
               </Button>
@@ -143,7 +151,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button onClick={() => window.open("mailto:benyahia.zaim@gmail.com")}>
               Contact
             </Button>
-            {mounted && theme && data.darkMode && (
+            {mounted && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -151,7 +159,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt="Icône pour changer le thème"
-                ></img>
+                />
               </Button>
             )}
           </div>
@@ -162,7 +170,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
-                classes="first:ml-1"
+                className="first:ml-1"
               >
                 Resume
               </Button>
@@ -172,7 +180,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Contact
             </Button>
 
-            {mounted && theme && data.darkMode && (
+            {mounted && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 aria-label="Changer de thème"
@@ -181,7 +189,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt="Icône pour changer le thème"
-                ></img>
+                />
               </Button>
             )}
           </div>
